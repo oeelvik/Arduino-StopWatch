@@ -19,15 +19,15 @@ class StopWatch{
 public:
 	StopWatch();
 	void init();
-	void start();
+	void clear();
 	void split();
 
 	unsigned long splitTimes[MAX_SPLIT_TIMES];
 	int index;
+private:
 	unsigned long now;
 	unsigned long lastTime;
 	unsigned long overhead;
-private:
 };
 
 

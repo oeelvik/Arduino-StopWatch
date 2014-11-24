@@ -10,7 +10,7 @@ StopWatch::StopWatch(){}
 
 void StopWatch::init(){
 	overhead = 0;
-	start();
+	clear();
 	split();
 	split();
 	split();
@@ -18,9 +18,11 @@ void StopWatch::init(){
 	//micros has resolution of 4 and we do not want it to wrap around in case of rounding upp overhead
 	//This means that calling split multiple times without code inbetween will give us a result between 0 and 8
 	// - 4 makes shure we never get negative numbers resulting in unsigned wrap around 
+
+	clear();
 }
 
-void StopWatch::start(){
+void StopWatch::clear(){
 	index = 0;
 }
 

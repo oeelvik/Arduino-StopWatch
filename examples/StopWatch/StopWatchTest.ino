@@ -1,4 +1,3 @@
-
 #include <StopWatch.h>
 
 StopWatch stopWatch;
@@ -6,7 +5,6 @@ StopWatch stopWatch;
 void setup(){
 	Serial.begin(9600);
 	stopWatch.init();
-	stopWatch.start();
 	stopWatch.split();//Allways call split before the first task
         Serial.println("First Task");
 	stopWatch.split();
